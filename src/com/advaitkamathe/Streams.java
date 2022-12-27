@@ -1,5 +1,12 @@
 package com.advaitkamathe;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.print.attribute.HashPrintJobAttributeSet;
+
 public class Streams {
 
   // Stream API is used to process collections of object.
@@ -19,6 +26,30 @@ public class Streams {
 
   public static void main(String[] args) {
 
-  }
+    List<String> list = Arrays.asList("John", "Jane", "Joe", "Jack");
 
+    // forEach()
+    list.stream().forEach(listItem -> System.out.println(listItem));
+
+    // Sorting
+    list.stream().sorted().forEach(listItem -> System.out.println(listItem));
+    list.stream().sorted(Comparator.reverseOrder()).forEach(listItem -> System.out.println(listItem));
+
+    Map<Integer, String> map = new HashMap<>();
+    map.put(1, "One");
+    map.put(2, "Two");
+    map.put(3, "Three");
+    map.put(4, "Four");
+
+    // forEach()
+    map.forEach((key, value) -> System.out.println(key + " -> " + value));
+    map.entrySet().stream().forEach((obj) -> System.out.println(obj));
+
+    // filter()
+    map.entrySet().stream().filter(key -> key.getKey() % 2 == 0).forEach(obj -> System.out.println(obj));
+
+    // Sorting
+    map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+    map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+  }
 }
