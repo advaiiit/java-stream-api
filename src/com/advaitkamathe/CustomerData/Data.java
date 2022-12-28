@@ -1,4 +1,4 @@
-package com.advaitkamathe.MapAndFlatMap;
+package com.advaitkamathe.CustomerData;
 
 import java.util.Arrays;
 import java.util.List;

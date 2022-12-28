@@ -1,5 +1,7 @@
-package com.advaitkamathe.MapAndFlatMap;
+package com.advaitkamathe;
 
+import com.advaitkamathe.CustomerData.Customer;
+import com.advaitkamathe.CustomerData.Data;
 import java.util.List;
 import java.util.stream.Collectors;
 

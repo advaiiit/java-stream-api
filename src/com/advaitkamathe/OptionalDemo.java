@@ -1,6 +1,6 @@
 package com.advaitkamathe;
 
-import com.advaitkamathe.MapAndFlatMap.Customer;
+import com.advaitkamathe.CustomerData.Customer;
 import java.util.Arrays;
 import java.util.Optional;
 
